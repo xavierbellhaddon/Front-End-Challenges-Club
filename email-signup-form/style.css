@@ -1,11 +1,6 @@
 * {
   box-sizing: border-box;
   font-family: "Inter";
-  /* font-style:  normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url("assets/webfont/Inter-Black.woff2") format("woff2"),
-         url("assets/webfont/Inter-Black.woff?v=3.11") format("woff"); */
 }
 
 @font-face {
@@ -47,14 +42,17 @@ label {
   color: var(--color-primary);
 }
 
+input {
+    height: 3em;
+    border: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
+    margin-top: .5em;
+}
+
 .signup {
   position: absolute;
   top: 30%;
-}
-
-.email {
-  border: none;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
+  width: 20%;
 }
 
 .submit {
