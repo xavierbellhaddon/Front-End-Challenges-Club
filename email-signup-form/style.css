@@ -42,21 +42,30 @@ label {
   color: var(--color-primary);
 }
 
-input {
-    height: 3em;
-    border: none;
+input, .submit {
+  height: 3em;
+  border: none;
+}
+
+.signup {
+    position: absolute;
+    top: 30%;
+    width: 20%;
+}
+
+.form-input {
+    width: min-content;
+    display: flex;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
     margin-top: .5em;
 }
 
-.signup {
-  position: absolute;
-  top: 30%;
-  width: 20%;
+.submit {
+  width: 3em;
+  background-color: var(--color-secondary);
 }
 
-.submit {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-  border: none;
+.submit svg {
+  height: 20px;
+  width: 20px;
 }
