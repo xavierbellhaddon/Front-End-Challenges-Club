@@ -62,6 +62,7 @@ input, .submit {
 }
 
 .email {
+    padding: 1em;
     flex-grow: 1;
 }
 
