@@ -40,6 +40,11 @@ body {
   position: relative;
 }
 
+svg {
+    height: 20px;
+    width: 20px;
+}
+
 h1,
 label {
   color: var(--color-primary);
@@ -89,27 +94,17 @@ input, .submit {
   background-color: var(--color-secondary);
 }
 
-.submit svg {
-  height: 20px;
-  width: 20px;
-}
-
 .error {
     margin-top: 1em;
     padding: 1em;
     color: var(--color-error);
     background-color: var(--color-error-bg);
     border: 2px solid var(--color-error);
+    display: none;
 }
 
 .error span {
-    margin: 0;
     font-weight: 700;
-}
-
-.error svg {
-    height: 20px;
-    width: 20px;
 }
 
 .alert {
@@ -120,4 +115,17 @@ input, .submit {
     margin-left: .5em;
     display: flex;
     flex-direction: column;
+}
+
+.success {
+    width: 300px;
+    padding: 1em;
+    color: var(--color-success);
+    background-color: var(--color-success-bg);
+    border: 2px solid var(--color-success);
+    display: none;
+}
+
+.success span {
+    font-weight: 700;
 }
