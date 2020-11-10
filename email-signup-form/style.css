@@ -54,10 +54,15 @@ input, .submit {
 }
 
 .form-input {
-    width: min-content;
+    /* width: min-content; */
+    width: 100%;
     display: flex;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
     margin-top: .5em;
+}
+
+.email {
+    flex-grow: 1;
 }
 
 .submit {
