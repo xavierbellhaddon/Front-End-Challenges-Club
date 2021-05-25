@@ -5,7 +5,7 @@
 :root {
   --color-pink: #faa7ed;
   --color-navy: #0c1f72;
-  --color-navy-opaque: rgba(6, 0, 79, 0.77);
+  --color-navy-opaque: #06004fc4;
   --color-light: #ffffff;
   --color-dark: #252525;
   --font-serif: Georgia, serif;
@@ -51,6 +51,7 @@ body {
     flex-shrink: 0;
     max-width: 100%;
     filter: grayscale(1) brightness(1.1);
+    transition: all 0.2s ease-in-out;
 }
 
 .card::before, .card::after {
@@ -69,6 +70,7 @@ body {
         mix-blend-mode: multiply;
         z-index: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out;
     }
 }
 
@@ -79,5 +81,15 @@ body {
         mix-blend-mode: lighten;
         z-index: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out;
     }
 }
+
+.card:hover img {
+    filter: grayscale(0) brightness(1);
+}
+
+.card:hover::before, .card:hover::after {
+    opacity: 0;
+}
+
