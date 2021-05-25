@@ -51,7 +51,7 @@ body {
     flex-shrink: 0;
     max-width: 100%;
     filter: grayscale(1) brightness(1.1);
-    transition: all 0.2s ease-in-out;
+    transition: filter 0.2s ease-in-out;
 }
 
 .card::before, .card::after {
@@ -64,7 +64,7 @@ body {
 }
 
 @supports (mix-blend-mode: multiply) {
-    ::before {
+    .card::before {
         background-color: var(--color-pink);
         opacity: 1;
         mix-blend-mode: multiply;
@@ -75,8 +75,8 @@ body {
 }
 
 @supports (mix-blend-mode: lighten) {
-    ::after {
-        background-color: var(--color-navy-opaque);
+    .card::after {
+        background-color: var(--color-navy);
         opacity: 1;
         mix-blend-mode: lighten;
         z-index: 1;
@@ -93,3 +93,9 @@ body {
     opacity: 0;
 }
 
+.cover-button {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+}
