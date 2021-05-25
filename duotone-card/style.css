@@ -1,20 +1,40 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 :root {
   --color-pink: #faa7ed;
   --color-navy: #0c1f72;
-  --color-navy-opaque: #06004fc4;
+  --color-navy-translucent: #06004fc4;
   --color-light: #ffffff;
   --color-dark: #252525;
   --font-serif: Georgia, serif;
+  --font-sans: Helvetica, sans-serif;
+  
 }
 
 h1 {
-    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+p {
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
+h1, h2 {
     font-weight: 400;
 }
+
 
 body {
     padding: 5rem 1.5rem;
@@ -30,21 +50,33 @@ body {
 #cards {
   display: flex;
   width: min-content;
-  margin-left: -20px;
-  margin-top: -20px;
+  margin-left: -1.25rem;
+  margin-top: -1.25rem;
 }
 
 .card {
   display: flex;
   position: relative;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   height: 230px;
   width: 200px;
-  background-color: black;
+  background: black;
+  color: white;
+}
+
+.card-content {
+    position: absolute;
+    width: 100%;
+    background: var(--color-navy-translucent);
+    z-index: 2;
+    bottom: 0;
+    opacity: 1;
+    padding: 0.6rem 3rem 0.6rem 0.6rem;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .card img {
@@ -65,7 +97,7 @@ body {
 
 @supports (mix-blend-mode: multiply) {
     .card::before {
-        background-color: var(--color-pink);
+        background: var(--color-pink);
         opacity: 1;
         mix-blend-mode: multiply;
         z-index: 1;
@@ -76,13 +108,17 @@ body {
 
 @supports (mix-blend-mode: lighten) {
     .card::after {
-        background-color: var(--color-navy);
+        background: var(--color-navy);
         opacity: 1;
         mix-blend-mode: lighten;
         z-index: 1;
         width: 100%;
         transition: opacity 0.2s ease-in-out;
     }
+}
+
+.card:hover .card-content {
+    background: var(--color-navy);
 }
 
 .card:hover img {
@@ -95,7 +131,7 @@ body {
 
 .cover-button {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     height: 100%;
     width: 100%;
 }
