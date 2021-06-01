@@ -83,12 +83,12 @@ body {
 
 .card-content svg {
     position: absolute;
-    right: 1rem;
+    right: 0.5rem;
     top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.2s ease-in-out;
+    transform: translate(-0.5rem, -50%);
     fill: currentColor;
     opacity: 0;
+    transition: opacity 200ms linear, transform 300ms cubic-bezier(1, 0, 0.55, 0.85);
 }
 
 .card img {
@@ -141,8 +141,9 @@ body {
 
 .card:hover svg,
 .card:focus-within svg {
-    transform: translate(0.5rem, -50%);
+    transform: translate(0, -50%);
     opacity: 1;
+    transition: all 0.2s ease-in-out;
 }
 
 .card:hover img, 
