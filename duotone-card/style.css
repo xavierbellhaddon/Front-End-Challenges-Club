@@ -126,15 +126,20 @@ body {
     }
 }
 
-.card:hover .card-content {
+.card:hover .card-content,
+.card:focus-within .card-content {
     background: var(--color-navy);
 }
 
-.card:hover img {
+.card:hover img, 
+.card:focus-within img {
     filter: grayscale(0) brightness(1);
 }
 
-.card:hover::before, .card:hover::after {
+.card:hover::before, 
+.card:hover::after, 
+.card:focus-within::before, 
+.card:focus-within::after  {
     opacity: 0;
 }
 
@@ -144,3 +149,10 @@ body {
     height: 100%;
     width: 100%;
 }
+
+.card:focus-within {
+    outline: 4px solid var(--color-navy);
+}
+
+
+
