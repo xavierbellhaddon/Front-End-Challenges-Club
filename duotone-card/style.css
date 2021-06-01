@@ -31,7 +31,8 @@ p {
     margin-bottom: 0;
 }
 
-h1, h2 {
+h1, 
+h2 {
     font-weight: 400;
 }
 
@@ -77,25 +78,28 @@ body {
     bottom: 0;
     opacity: 1;
     padding: 0.6rem 3rem 0.6rem 0.6rem;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .card-content svg {
     position: absolute;
-    right: 0;
+    right: 1rem;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
     fill: currentColor;
+    opacity: 0;
 }
 
 .card img {
     flex-shrink: 0;
     max-width: 100%;
     filter: grayscale(1) brightness(1.1);
-    transition: filter 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-.card::before, .card::after {
+.card::before, 
+.card::after {
     content: "";
     display: block;
     width: 100%;
@@ -111,7 +115,7 @@ body {
         mix-blend-mode: multiply;
         z-index: 1;
         width: 100%;
-        transition: opacity 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 }
 
@@ -122,13 +126,23 @@ body {
         mix-blend-mode: lighten;
         z-index: 1;
         width: 100%;
-        transition: opacity 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
+}
+
+.card:focus-within {
+    outline: 4px solid var(--color-navy);
 }
 
 .card:hover .card-content,
 .card:focus-within .card-content {
     background: var(--color-navy);
+}
+
+.card:hover svg,
+.card:focus-within svg {
+    transform: translate(0.5rem, -50%);
+    opacity: 1;
 }
 
 .card:hover img, 
@@ -150,9 +164,7 @@ body {
     width: 100%;
 }
 
-.card:focus-within {
-    outline: 4px solid var(--color-navy);
-}
+
 
 
 
