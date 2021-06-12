@@ -2,6 +2,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  color: var(--color-light);
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28.8px;
 }
 
 :root {
@@ -23,13 +28,20 @@ button {
   width: 213px;
   border: none;
   border-radius: 8px;
-  color: var(--color-light);
-  font-family: "Lato", sans-serif;
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 28.8px;
 }
 
 .default {
   background: var(--color-primary);
+}
+
+.loaded {
+  background: var(--color-primary-light);
+}
+
+.success {
+  background: var(--color-success);
+}
+
+.error {
+  background: var(--color-error);
 }
