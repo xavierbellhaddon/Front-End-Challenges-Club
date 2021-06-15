@@ -5,7 +5,6 @@ const number = Math.floor(Math.random() * 2);
 let i = 0;
 let width = 0;
 
-
 function increment() {
   if (i === 0) {
     const id = setInterval(frame, 20);
