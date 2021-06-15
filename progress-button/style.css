@@ -69,16 +69,12 @@ svg {
 
 #progress {
   position: absolute;
-  background: var(--color-primary-light);
-  height: 3.75rem;
   top: 50%;
   left: 0;
+  background: var(--color-primary-light);
+  height: 3.75rem;
+  border-radius: 8px 0 0 8px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  border-radius: 8px 0 0 8px;
 }
 
-/* #progress.full {
-  width: 100%;
-  border-radius: 8px;
-} */
