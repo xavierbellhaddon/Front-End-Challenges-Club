@@ -6,6 +6,9 @@ let i = 0;
 let width = 0;
 
 function increment() {
+    document
+    .querySelector("button")
+    .removeEventListener("click", increment);
   if (i === 0) {
     const id = setInterval(frame, 20);
     function frame() {
@@ -14,9 +17,9 @@ function increment() {
         i = 0;
         width = 0;
         button.classList.remove("default");
-        document
-          .querySelector("button")
-          .removeEventListener("click", increment);
+        // document
+        //   .querySelector("button")
+        //   .removeEventListener("click", increment);
         if (number === 0) {
           button.classList.add("success");
           buttonContent.innerHTML = `

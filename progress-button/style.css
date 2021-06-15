@@ -36,6 +36,7 @@ svg {
 
 .default {
   background: var(--color-primary);
+  cursor: pointer;
 }
 
 .loaded {
