@@ -9,13 +9,13 @@ function increment() {
   this.setAttribute("aria-pressed", true);
   this.removeEventListener("click", increment);
   if (i === 0) {
+    button.classList.remove("default");
     const id = setInterval(frame, 20);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
         i = 0;
         width = 0;
-        button.classList.remove("default");
         if (number === 0) {
           button.classList.add("success");
           buttonContent.innerHTML = `
