@@ -19,8 +19,6 @@ button {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  /* height: 60px; */
-  /* width: 213px; */
   height: 3.75rem;
   width: 13.313rem;
   border: none;
@@ -30,6 +28,7 @@ button {
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 1.8rem;
+  overflow: hidden;
 }
 
 svg {
@@ -61,9 +60,25 @@ svg {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .button-text {
   margin-right: 1rem;
 }
 
+#progress {
+  position: absolute;
+  background: var(--color-primary-light);
+  height: 3.75rem;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 8px 0 0 8px;
+}
+
+/* #progress.full {
+  width: 100%;
+  border-radius: 8px;
+} */
